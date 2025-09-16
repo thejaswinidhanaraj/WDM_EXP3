@@ -36,10 +36,12 @@ for each wear category.</p>
 <p align="justify">
 8. Visulaize the sequence patterns using matplotlib.
 </p>
+
 ### Program:
 ```
 from collections import defaultdict
 from itertools import combinations
+
 # Function to generate candidate k-item sequences
 def generate_candidates(dataset, k):
     candidates = defaultdict(int)
@@ -50,7 +52,7 @@ def generate_candidates(dataset, k):
     return {item: support for item, support in candidates.items() if support >= min_support}
 
 
-#Function to perform GSP algorithm
+# Function to perform GSP algorithm
 def gsp(dataset, min_support):
     fp = defaultdict(int)
     k = 1
@@ -78,14 +80,13 @@ dataset2 = [
     [["a"], ["b","d"], ["b","c","b"], ["a","d","e"]]
 ]
 
-
-#Minimum support threshold
+# Minimum support threshold
 min_support = 5
-#Perform GSP algorithm for each category
+# Perform GSP algorithm for each category
 top_wear_result = gsp(top_wear_data, min_support)
 bottom_wear_result = gsp(bottom_wear_data, min_support)
 party_wear_result = gsp(party_wear_data, min_support)
-#Output the frequent sequential patterns for each category
+# Output the frequent sequential patterns for each category
 print("Frequent Sequential Patterns - Top Wear:")
 if top_wear_result:
  for pattern, support in top_wear_result.items():
@@ -104,7 +105,7 @@ if party_wear_result:
  print(f"Pattern: {pattern}, Support: {support}")
 else:
  print("No frequent sequential patterns found in Party Wear.")
- ``
+ ```
 ### Output:
 <img width="329" height="647" alt="web3" src="https://github.com/user-attachments/assets/4385ee71-bcfc-4e82-a1ee-17c2a0498124" />
 
