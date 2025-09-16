@@ -104,7 +104,7 @@ if party_wear_result:
  print(f"Pattern: {pattern}, Support: {support}")
 else:
  print("No frequent sequential patterns found in Party Wear.")
- ``
+ ```
 ### Output:
 <img width="329" height="647" alt="web3" src="https://github.com/user-attachments/assets/4385ee71-bcfc-4e82-a1ee-17c2a0498124" />
 
